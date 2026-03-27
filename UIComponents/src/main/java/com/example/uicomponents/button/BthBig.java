@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import android.view.LayoutInflater;
 
 import com.example.uicomponents.R;
 
@@ -20,6 +21,7 @@ public class BthBig  extends BthCustom{
     public BthBig(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr){
         super(context, attrs, defStyleAttr);
     }
+
 
     @Override
     public void init(Integer idLayout){

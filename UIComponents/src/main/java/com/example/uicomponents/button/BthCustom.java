@@ -45,7 +45,7 @@ public class BthCustom extends ConstraintLayout {
 
         if (type == TypeButton.PRIMARY || type == TypeButton.ON){
             Bth.setBackgroundResource(R.drawable.bth_primary);
-            Bth.setTextColor(Color.parseColor("#FFFFF"));
+            Bth.setTextColor(Color.parseColor("#FFFFFF"));
         } else if (type == TypeButton.SECONDARY) {
             Bth.setBackgroundResource(R.drawable.bth_secondary);
             Bth.setTextColor(Color.parseColor("#1A6FEE"));

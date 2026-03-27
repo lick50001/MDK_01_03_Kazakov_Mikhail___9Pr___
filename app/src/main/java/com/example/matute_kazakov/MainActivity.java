@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.uicomponents.button.BthBig;
 import com.example.uicomponents.button.BthCustom;
+import com.example.uicomponents.button.TbBig;
+import com.example.uicomponents.button.TbCustom;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
         bthEnable.setEnabled(false);
         bthTertiary.init("Авторизоваться", BthCustom.TypeButton.TERTIARY);
         bthTertiary.init("Забыли пароль?", BthCustom.TypeButton.SECONDARY);
+
+        TbBig tbPrimary = findViewById(R.id.tbPrimary);
+        TbBig tbActivity = findViewById(R.id.tbActivity);
+        TbBig tbError = findViewById(R.id.tbError);
+
+        tbPrimary.init("", TbCustom.TypeText.PRIMARY);
+        tbActivity.init("", TbCustom.TypeText.ACTIVITY);
+        tbError.init("", TbCustom.TypeText.ERROR);
 
     }
 }
