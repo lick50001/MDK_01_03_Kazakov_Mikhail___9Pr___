@@ -59,7 +59,7 @@ public class BthCustom extends ConstraintLayout {
     }
 
     @Override
-    public void senEnable(boolean enable){
+    public void setEnabled(boolean enable){
         super.setEnabled(enable);
         Bth.setEnabled(enable);
     }
