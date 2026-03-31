@@ -1,6 +1,8 @@
 package com.example.matute_kazakov;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,13 +33,36 @@ public class MainActivity extends AppCompatActivity {
         bthTertiary.init("Авторизоваться", BthCustom.TypeButton.TERTIARY);
         bthTertiary.init("Забыли пароль?", BthCustom.TypeButton.SECONDARY);
 
-        TbBig tbPrimary = findViewById(R.id.tbPrimary);
-        TbBig tbActivity = findViewById(R.id.tbActivity);
-        TbBig tbError = findViewById(R.id.tbError);
+        TbBig tbSurname = findViewById(R.id.tbPrimary);
+        TbBig tbNumbers = findViewById(R.id.tbActivity);
 
-        tbPrimary.init("", TbCustom.TypeText.PRIMARY);
-        tbActivity.init("", TbCustom.TypeText.ACTIVITY);
-        tbError.init("", TbCustom.TypeText.ERROR);
+        String ErrorText = "Фамилия должна содержать только буквы";
+        String ErrorNumber = "Только цифры!!!!";
 
+        tbSurname.init(
+                "Укажите фамилию",
+                "Введите фамилию",
+                "",
+                TbCustom.TypeText.PRIMARY,
+                ErrorText
+        );
+
+        tbNumbers.init("Напишите циферки", "Много циферок", "", TbCustom.TypeText.PRIMARY, ErrorNumber);
+
+        tbSurname.editText.addTextChangedListener(new android.text.TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(android.text.Editable s) {
+                tbSurname.validateLettersOnly(ErrorText);
+            }
+        });
+
+        tbNumbers.editText.addTextChangedListener(new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable s) {
+                tbNumbers.validateNumbersOnly(ErrorNumber);
+            }
+        });
     }
 }

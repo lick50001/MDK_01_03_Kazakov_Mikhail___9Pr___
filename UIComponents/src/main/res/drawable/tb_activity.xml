@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- ✅ Состояние: нажато -->
     <item android:state_pressed="true">
         <shape>
             <solid android:color="#d0c8e8"/>
@@ -10,7 +9,6 @@
         </shape>
     </item>
 
-    <!-- ✅ Состояние: фокус (для EditText) -->
     <item android:state_focused="true">
         <shape>
             <solid android:color="#e5e1f5"/>
@@ -19,7 +17,6 @@
         </shape>
     </item>
 
-    <!-- ✅ Состояние: отключено -->
     <item android:state_enabled="false">
         <shape>
             <solid android:color="#f5f5f5"/>
@@ -28,7 +25,6 @@
         </shape>
     </item>
 
-    <!-- ✅ ДЕФОЛТНЫЙ (последний!) -->
     <item>
         <shape>
             <solid android:color="#e5e1f5"/>
